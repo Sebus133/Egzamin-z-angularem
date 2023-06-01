@@ -1,0 +1,15 @@
+
+<h2>Liczba kursów {{liczba_kursow}}</h2>
+<ol>
+  <li *ngFor="let nazwa of nazwa_kursow; index as i;">{{nazwa_kursow[i]}}</li>
+</ol>
+
+<form #myForm="ngForm" (ngSubmit)="submit()">
+<label>imię i nazwisko</label><br>
+
+<input [(ngModel)]="imie_nazwisko" name="imie_nazwisko" id="imie_nazwisko"  type="text"><br>
+
+<label>numer kursu</label><br>
+<input [(ngModel)]="kurs" name="kurs" id="kurs" type="number">
+</form>
+<br><button type="submit" name="przycisk" class="btn btn-primary" (click) ="submit()">Zapisz do kursu</button>
